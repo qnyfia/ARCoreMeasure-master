@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.AC.Measure">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--
+         This tag indicates that this application requires ARCore.  This results in the application
+           only being visible in the Google Play Store on devices that support ARCore.
+    -->
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+             This tag indicates that this application requires ARCore.  This results in the Google Play
+                 Store downloading and installing ARCore along with the application.
+        -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0b148442de0ebe36c4bf3cd5803e980c9e954a47" />
+
+        <activity
+            android:name=".ArMeasureActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".ImageActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".CannyActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".BinaryActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".HistoryActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".Image_result"
+            android:theme="@style/AppTheme.FullScreen"/>
+    </application>
+
+</manifest>
