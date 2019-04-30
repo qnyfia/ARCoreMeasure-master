@@ -342,7 +342,7 @@ public class ImageView extends SurfaceView implements SurfaceHolder.Callback {
     @SuppressLint("NewApi")
     private void insertX() { // 輸入 x
         final AlertDialog.Builder builder = new AlertDialog.Builder(context); // 建立互動訊息
-        builder.setTitle("請輸入比例X");
+        builder.setTitle("請輸入比例X : ");
         builder.setCancelable(false);
 
         final EditText et = new EditText(context);
